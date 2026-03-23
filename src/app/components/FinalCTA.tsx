@@ -1,6 +1,8 @@
 import productImage from "../../assets/gadget.jpeg";
+import { usePixel } from "../../hooks/usePixel";
 
 export function FinalCTA() {
+  const { trackEvent } = usePixel();
   return (
     <section style={{ background: "#FFFFFF", padding: "80px 20px" }}>
       <div style={{ maxWidth: "900px", margin: "0 auto" }}>
@@ -142,7 +144,7 @@ export function FinalCTA() {
                 transition: "transform 0.2s, box-shadow 0.2s",
                 letterSpacing: "0.3px",
               }}
-              onClick={() => fbq('track', 'Lead')}
+              onClick={() => trackEvent('Lead')}
               onMouseEnter={e => {
                 (e.currentTarget as HTMLElement).style.transform = "translateY(-2px) scale(1.03)";
                 (e.currentTarget as HTMLElement).style.boxShadow = "0 14px 50px rgba(249,115,22,0.7)";

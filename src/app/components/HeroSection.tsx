@@ -1,4 +1,5 @@
 import productImage from "../../assets/gadget.jpeg";
+import { usePixel } from "../../hooks/usePixel";
 
 const benefits = [
   { icon: "⚡", text: "Potente succión" },
@@ -7,6 +8,7 @@ const benefits = [
 ];
 
 export function HeroSection() {
+  const { trackEvent } = usePixel();
   return (
     <section
       style={{
@@ -157,7 +159,7 @@ export function HeroSection() {
             transition: "transform 0.2s, box-shadow 0.2s",
             letterSpacing: "0.3px",
           }}
-          onClick={() => fbq('track', 'Lead')}
+          onClick={() => trackEvent('Lead')}
           onMouseEnter={e => {
             (e.currentTarget as HTMLElement).style.transform = "translateY(-2px) scale(1.03)";
             (e.currentTarget as HTMLElement).style.boxShadow = "0 12px 40px rgba(249,115,22,0.65)";

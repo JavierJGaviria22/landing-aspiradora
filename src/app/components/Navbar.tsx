@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
+import { usePixel } from "../../hooks/usePixel";
 
 export function Navbar() {
+  const { trackEvent } = usePixel();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -96,7 +98,7 @@ export function Navbar() {
           transition: "transform 0.15s, box-shadow 0.15s",
           whiteSpace: "nowrap",
         }}
-        onClick={() => fbq('track', 'Lead')}
+        onClick={() => trackEvent('Lead')}
         onMouseEnter={(e) => {
           (e.currentTarget as HTMLElement).style.transform = "scale(1.04)";
           (e.currentTarget as HTMLElement).style.boxShadow =

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import productImage from "../../assets/gadget.jpeg";
+import { usePixel } from "../../hooks/usePixel";
 
 function useCountdown(targetSeconds: number) {
   const [time, setTime] = useState(targetSeconds);
@@ -49,6 +50,7 @@ function TimeBlock({ value, label }: { value: string; label: string }) {
 }
 
 export function OfferSection() {
+  const { trackEvent } = usePixel();
   const countdown = useCountdown(4 * 3600 + 23 * 60 + 47); // 4h 23m 47s
 
   return (
@@ -193,7 +195,7 @@ export function OfferSection() {
               width: "100%",
               maxWidth: "420px",
             }}
-            onClick={() => fbq('track', 'Lead')}
+            onClick={() => trackEvent('Lead')}
             onMouseEnter={e => {
               (e.currentTarget as HTMLElement).style.transform = "translateY(-2px) scale(1.02)";
               (e.currentTarget as HTMLElement).style.boxShadow = "0 14px 50px rgba(249,115,22,0.7)";
