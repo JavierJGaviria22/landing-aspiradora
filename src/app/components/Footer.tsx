@@ -90,7 +90,7 @@ export function Footer() {
             <h4 style={{ color: "#FFFFFF", fontSize: "15px", fontWeight: 700, marginBottom: "16px" }}>📞 Contacto</h4>
             <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
               {[
-                { icon: "📧", text: "grupobjc@gmail.com.com" },
+                { icon: "📧", text: "grupo.bjc26@gmail.com" },
                 // { icon: "💬", text: "Chat en vivo (9am - 6pm)" },
                 { icon: "📱", text: "WhatsApp: +57 323 652 4637" },
               ].map((c, i) => (

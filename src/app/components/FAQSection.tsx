@@ -158,7 +158,7 @@ export function FAQSection() {
         >
           <p style={{ color: "#6B7280", fontSize: "15px" }}>
             ¿No encontraste lo que buscabas?{" "}
-            <a href="mailto:soporte@miniaspiradora.com" style={{ color: "#F97316", fontWeight: 600, textDecoration: "none" }}>
+            <a href="mailto:grupo.bjc26@gmail.com" style={{ color: "#F97316", fontWeight: 600, textDecoration: "none" }}>
               Contáctanos por Whatsapp →
             </a>
           </p>
