@@ -4,8 +4,9 @@ import "./styles/index.css";
 
 // Inicializar Meta Pixel
 if (window.fbq) {
-  window.fbq('init', '1282648013785020');
+  window.fbq('init', '1474318414099318');
   window.fbq('track', 'PageView');
+  window.fbq('track', 'Lead');
 }
 
 createRoot(document.getElementById("root")!).render(<App />);
