@@ -195,7 +195,7 @@ export function OfferSection() {
               width: "100%",
               maxWidth: "420px",
             }}
-            onClick={() => trackEvent('Lead')}
+            onClick={() => window.fbq('track', 'Lead')}
             onMouseEnter={e => {
               (e.currentTarget as HTMLElement).style.transform = "translateY(-2px) scale(1.02)";
               (e.currentTarget as HTMLElement).style.boxShadow = "0 14px 50px rgba(249,115,22,0.7)";

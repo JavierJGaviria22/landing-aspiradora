@@ -98,7 +98,7 @@ export function Navbar() {
           transition: "transform 0.15s, box-shadow 0.15s",
           whiteSpace: "nowrap",
         }}
-        onClick={() => trackEvent('Lead')}
+        onClick={() => window.fbq('track', 'Lead')}
         onMouseEnter={(e) => {
           (e.currentTarget as HTMLElement).style.transform = "scale(1.04)";
           (e.currentTarget as HTMLElement).style.boxShadow =

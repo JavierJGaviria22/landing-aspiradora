@@ -6,7 +6,6 @@ import "./styles/index.css";
 if (window.fbq) {
   window.fbq('init', '1474318414099318');
   window.fbq('track', 'PageView');
-  window.fbq('trackCustom', 'Lead');
 }
 
 createRoot(document.getElementById("root")!).render(<App />);
